@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configurações da Conta - Tekóa</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4", // Dark Blue requested
+                        "success": "#10B981", // Soft Green requested
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#101622",
+                        "text-primary": "#111318",
+                        "text-secondary": "#637588",
+                        "input-bg": "#F3F4F6",
+                        "border-color": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem", // Requested Rounded-XL
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-primary flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm dark:bg-background-dark/95 border-b border-gray-100 dark:border-gray-800">
+<div class="px-4 py-3 flex items-center justify-between h-16">
+<button aria-label="Voltar" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-primary">
+<span class="material-symbols-outlined text-[28px]">arrow_back</span>
+</button>
+<div class="flex-1 flex justify-center">
+<!-- Using a placeholder logo div as requested -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">diversity_1</span>
+</div>
+<span class="font-bold text-lg tracking-tight text-primary hidden sm:block">Tekóa</span>
+</div>
+</div>
+<div class="w-10"></div> <!-- Spacer for alignment -->
+</div>
+<div class="px-4 pb-4">
+<h1 class="text-2xl font-bold text-primary dark:text-white leading-tight">Configurações da Conta</h1>
+<p class="text-sm text-text-secondary mt-1">Atualize seus dados pessoais</p>
+</div>
+</header>
+<!-- Main Content Form -->
+<main class="flex-1 w-full max-w-lg mx-auto px-4 py-6 pb-32">
+<form action="#" class="space-y-6" onsubmit="event.preventDefault()">
+<!-- Nome Completo -->
+<div class="space-y-2">
+<label class="block text-base font-semibold text-text-primary dark:text-white" for="name">
+                    Nome Completo
+                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">person</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-input-bg dark:bg-gray-800 border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl text-base text-text-primary dark:text-white placeholder-gray-400 transition-all shadow-sm" id="name" placeholder="Seu nome completo" type="text" value="Maria Silva"/>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="block text-base font-semibold text-text-primary dark:text-white" for="email">
+                    E-mail
+                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">mail</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-input-bg dark:bg-gray-800 border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl text-base text-text-primary dark:text-white placeholder-gray-400 transition-all shadow-sm" id="email" placeholder="seu@email.com" type="email" value="maria.silva@email.com"/>
+</div>
+</div>
+<!-- Telefone / WhatsApp -->
+<div class="space-y-2">
+<label class="block text-base font-semibold text-text-primary dark:text-white" for="phone">
+                    WhatsApp / Telefone
+                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">call</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-input-bg dark:bg-gray-800 border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl text-base text-text-primary dark:text-white placeholder-gray-400 transition-all shadow-sm" id="phone" placeholder="(00) 00000-0000" type="tel" value="(11) 98765-4321"/>
+</div>
+</div>
+<!-- País de Residência -->
+<div class="space-y-2">
+<label class="block text-base font-semibold text-text-primary dark:text-white" for="country">
+                    País de Residência
+                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">public</span>
+</div>
+<select class="block w-full pl-12 pr-10 py-4 bg-input-bg dark:bg-gray-800 border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl text-base text-text-primary dark:text-white transition-all shadow-sm appearance-none" id="country">
+<option selected="" value="br">Brasil</option>
+<option value="pt">Portugal</option>
+<option value="us">Estados Unidos</option>
+<option value="ao">Angola</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Idioma -->
+<div class="space-y-2">
+<label class="block text-base font-semibold text-text-primary dark:text-white" for="language">
+                    Idioma de Preferência
+                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">translate</span>
+</div>
+<select class="block w-full pl-12 pr-10 py-4 bg-input-bg dark:bg-gray-800 border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl text-base text-text-primary dark:text-white transition-all shadow-sm appearance-none" id="language">
+<option selected="" value="pt">Português</option>
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="fr">Français</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Submit Button Area -->
+<div class="pt-6 space-y-4">
+<button class="w-full flex items-center justify-center gap-2 bg-success hover:bg-success/90 text-white font-bold text-lg h-14 rounded-xl shadow-lg shadow-success/20 transition-transform active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined">check_circle</span>
+                    Salvar mudanças
+                </button>
+<div class="flex items-start gap-2 px-2">
+<span class="material-symbols-outlined text-gray-400 text-lg mt-0.5 shrink-0">lock</span>
+<p class="text-xs text-text-secondary dark:text-gray-400 leading-relaxed">
+                        Sua privacidade é importante. Seus dados são criptografados e utilizados apenas para melhorar sua experiência na Tekóa.
+                    </p>
+</div>
+</div>
+</form>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs font-semibold">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="agendamentos.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">calendar_month</span>
+      <span class="text-xs">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+<style>
+        .font-variation-settings-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Mocking safe area for bottom nav on non-iPhone devices viewing this */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+    </style>
+</body></html>

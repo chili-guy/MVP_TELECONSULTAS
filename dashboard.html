@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="light" lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Principal - Meu Painel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ee8c2b",
+            "background-light": "#ffffff",
+            "background-dark": "#181411",
+            "blue-dark": "#0d3b66",
+            "blue-medium": "#3b82f6",
+            "blue-light": "#bfdbfe",
+            "green-soft": "#a7c957",
+            "yellow-support": "#ffc857",
+            "text-primary": "#181411",
+            "text-secondary": "#897561",
+            "text-on-dark": "#f8f7f6"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "1.5rem",
+            "xl": "2rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary dark:text-text-on-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden pb-24">
+<header class="flex flex-col gap-1 bg-background-light dark:bg-background-dark p-4 pb-2 sticky top-0 z-10">
+<div class="flex h-12 items-center justify-between">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-cover bg-center bg-no-repeat" data-alt="Tekóa app logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTiJKQL3vq4GmSUuK5dlDuVXqXFTrHrmuG82MOkGtMNM34cWDwLPm2R5Xi1HmpaS9EUayJ3auZ_nqjB9E6l4qk0W3Vklh_px1UtFqGR7Oi3oM8Xs4AtatdfLorzHFPeuFVhMjyyMohfGLv4dfFKBj4KKPaUs6OHzlc2-LsOMKAEjl_oTAgn7TQIPknCX9N0Nv6yQ3Bn7uCdsZvIEUp1J-HcDN4cTAKoC9iaryd2FdQD9lVf5lRpIrsDau4Lll0E4nQua35PhbrTvE");'></div>
+<div class="flex items-center gap-2">
+<p class="font-bold text-lg text-blue-dark dark:text-primary">Tekóa</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<div class="group relative">
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-text-primary dark:text-text-on-dark">
+<span class="material-symbols-outlined text-3xl">more_vert</span>
+</button>
+<div class="absolute right-0 mt-2 w-56 origin-top-right rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-focus-within:block dark:bg-gray-800 dark:ring-white/10">
+<div aria-labelledby="options-menu" aria-orientation="vertical" class="py-1" role="menu">
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" href="dashboard.html" role="menuitem">Meus dados</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" href="dashboard.html" role="menuitem">Meu plano</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" href="dashboard.html" role="menuitem">Histórico de consultas</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" href="dashboard.html" role="menuitem">Suporte</a>
+<a class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700" href="dashboard.html" role="menuitem">Sair</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="text-text-primary dark:text-text-on-dark tracking-light text-[28px] font-bold leading-tight">Olá, Maria</p>
+</header>
+<h2 class="text-blue-dark dark:text-primary tracking-light text-xl font-semibold leading-tight px-4 text-left pb-3 pt-3">Como podemos te ajudar hoje?</h2>
+<div class="p-4">
+<div class="flex flex-col items-start justify-between gap-4 rounded-xl bg-primary p-6 shadow-lg">
+<div class="flex items-center gap-4">
+<div class="flex size-14 items-center justify-center rounded-full bg-white/20">
+<span class="material-symbols-outlined text-4xl text-white">psychology</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Apoio Psicológico</h3>
+<p class="text-white/90 text-base font-normal leading-normal">Psicologia intercultural</p>
+</div>
+</div>
+<div class="flex w-full items-center justify-between">
+<p class="text-white/90 text-sm font-normal leading-normal">Sessões a €17 • até 50 min</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-white text-primary text-sm font-bold leading-normal">
+<span class="truncate">Agendar consulta</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-3 rounded-xl bg-blue-medium p-4" data-alt="Mentorship card">
+<div class="flex size-10 items-center justify-center rounded-full bg-white/20">
+<span class="material-symbols-outlined text-white text-2xl">school</span>
+</div>
+<div class="flex-grow">
+<p class="text-white text-lg font-bold">Mentorias</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 bg-white/30 text-white text-sm font-semibold leading-normal">
+<span>Agendar sessão</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-blue-light p-4" data-alt="Video library card">
+<div class="flex size-10 items-center justify-center rounded-full bg-blue-dark/10">
+<span class="material-symbols-outlined text-blue-dark text-2xl">play_circle</span>
+</div>
+<div class="flex-grow">
+<p class="text-blue-dark text-lg font-bold">Videoteca</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 bg-blue-dark/20 text-blue-dark text-sm font-semibold leading-normal">
+<span>Assistir vídeos</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-green-soft p-4" data-alt="Online events card">
+<div class="flex size-10 items-center justify-center rounded-full bg-white/30">
+<span class="material-symbols-outlined text-white text-2xl">event</span>
+</div>
+<div class="flex-grow">
+<p class="text-white text-lg font-bold">Eventos Online</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 bg-white/40 text-white text-sm font-semibold leading-normal">
+<span>Ver eventos</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-yellow-support p-4" data-alt="Community access card">
+<div class="flex size-10 items-center justify-center rounded-full bg-blue-dark/10">
+<span class="material-symbols-outlined text-blue-dark text-2xl">groups</span>
+</div>
+<div class="flex-grow">
+<p class="text-blue-dark text-lg font-bold">Comunidade</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 bg-blue-dark/20 text-blue-dark text-sm font-semibold leading-normal">
+<span>Acessar</span>
+</button>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex items-center justify-between gap-4 rounded-xl bg-blue-dark p-5 shadow-md">
+<div class="flex flex-1 flex-col gap-3">
+<div class="flex flex-col">
+<p class="text-white text-lg font-bold leading-tight">Rede de apoio ao imigrante</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-4 bg-white/20 text-white text-sm font-semibold leading-normal w-fit">
+<span class="truncate">Acessar rede de apoio</span>
+</button>
+</div>
+<div class="flex size-14 items-center justify-center rounded-full bg-white/10 text-white" data-alt="Support network icon">
+<span class="material-symbols-outlined text-4xl">support_agent</span>
+</div>
+</div>
+</div>
+<div class="px-4 flex flex-col gap-3">
+<a class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-white/10 p-4 w-full" href="dashboard.html">
+<div class="flex flex-col">
+<p class="text-text-primary dark:text-text-on-dark text-base font-bold">Blog &amp; Conteúdos</p>
+<p class="text-text-secondary dark:text-text-on-dark/70 text-sm">Artigos e dicas para sua jornada</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary dark:text-text-on-dark/70">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-white/10 p-4 w-full" href="dashboard.html">
+<div class="flex flex-col">
+<p class="text-text-primary dark:text-text-on-dark text-base font-bold">Testes de Saúde Mental</p>
+<p class="text-text-secondary dark:text-text-on-dark/70 text-sm">Avaliações rápidas e anônimas</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary dark:text-text-on-dark/70">arrow_forward_ios</span>
+</a>
+</div>
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs font-semibold">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="agendamentos.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">calendar_month</span>
+      <span class="text-xs">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+</div>
+
+</body></html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Métodos de Pagamento - Tekóa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1152d4", // Dark Blue requested
+              "background-light": "#FFFFFF", // White background requested
+              "background-dark": "#101622",
+              "action-green": "#4CAF50", // Verde Suave
+              "action-yellow": "#FFC107", // Amarelo Apoio
+              "text-main": "#111318",
+              "text-secondary": "#616f89",
+            },
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem", // Requested Rounded-XL
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main overflow-x-hidden antialiased selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between p-4">
+<button aria-label="Voltar" class="flex items-center justify-center p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-primary">
+<span class="material-symbols-outlined !text-[28px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-2">
+<!-- Logo Placeholder -->
+<div class="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">Á</div>
+<span class="font-bold text-lg text-primary tracking-tight">Tekóa</span>
+</div>
+<div class="w-10"></div> <!-- Spacer for center alignment -->
+</div>
+<div class="px-5 pb-4">
+<h1 class="text-primary dark:text-white text-[28px] font-bold leading-tight tracking-tight">Métodos de<br/>Pagamento</h1>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-col gap-6 p-5">
+<!-- Billing Info (ActionPanel reused) -->
+<section aria-labelledby="billing-info">
+<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 shadow-sm">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+<h2 class="text-lg font-bold" id="billing-info">Cobrança Atual</h2>
+</div>
+<div class="flex justify-between items-end border-b border-gray-100 dark:border-gray-700 pb-3">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400 mb-1">Plano Ativo</p>
+<p class="text-xl font-bold text-text-main dark:text-white">Premium Mensal</p>
+</div>
+<p class="text-lg font-bold text-primary dark:text-blue-400">R$ 29,90</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-text-secondary dark:text-gray-400">Próxima fatura: 15 Out</span>
+<a class="text-sm font-bold text-primary dark:text-blue-400 flex items-center gap-1 hover:underline" href="dashboard.html">
+                                Ver detalhes
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Saved Cards List (ListItem reused & modified) -->
+<section aria-labelledby="saved-cards">
+<h2 class="text-xl font-bold text-text-main dark:text-white mb-4 px-1" id="saved-cards">Seus Cartões</h2>
+<div class="flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="group relative flex flex-col sm:flex-row sm:items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-1 items-center gap-4">
+<div class="flex h-12 w-16 shrink-0 items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-gray-600" data-alt="Mastercard logo on card icon">
+<!-- Replaced image with icon for stability, but kept data-alt as requested -->
+<img alt="Mastercard" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDErq33_PBekspTYkTYRg6QkYiHEJEKmAP_jCn8zYF2wyaVSEmeFJpC_KOTGSaxH8kaMai932TFzofE-sHdgwiXJR0r0Y7u9vCIvZXS2JiU5-37p04w_3lBubMBXCxHdTlmDmHcs6WGFLJcxGzmjAKcWsusF3BHKzgoGNvmtXZsrCyXkM1O9wlI5rzrr5oWh6bJo7g8T8focoBTFUFbNXmlW2sWLlAQjSAw2gZyC4GZAnn1ldkM5sLn3rkpWug19jNQKJITjdOMwDg"/>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-text-main dark:text-white">Mastercard •••• 8842</p>
+<p class="text-sm text-text-secondary dark:text-gray-400">Expira em 12/25</p>
+</div>
+</div>
+<button class="w-full sm:w-auto mt-2 sm:mt-0 px-4 py-2.5 rounded-xl border border-action-yellow/30 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 text-sm font-bold transition-colors hover:bg-yellow-100 dark:hover:bg-yellow-900/40 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+                            Remover
+                        </button>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col sm:flex-row sm:items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-1 items-center gap-4">
+<div class="flex h-12 w-16 shrink-0 items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-gray-600" data-alt="Visa logo on card icon">
+<img alt="Visa" class="h-4 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrDv3nKEUVCKC5oonty-RN6-6txx3JzhJ0RV-FspmTLrwnKWoytm9I3y3GLm8Jx5QxOvO43XshJuoyUgd-3bRpnFwJr9AUXAVh-BA03iVGMqxVMTzqFrpKxrgZ0S8guq7oMJb4PrnYO57Up7f02pYgRz6yIDo5t9SZSVYTzEh7G5SMH1vAN4T5_XHb1p3OxXU9nvkzoT8cajNgTI0P16IWtWduMTWFYBTeCuee8wuT98pr1YkzfzprIL6oG8wU1Q5D8b771ecJcJw"/>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-text-main dark:text-white">Visa •••• 4219</p>
+<p class="text-sm text-text-secondary dark:text-gray-400">Expira em 08/24</p>
+</div>
+</div>
+<button class="w-full sm:w-auto mt-2 sm:mt-0 px-4 py-2.5 rounded-xl border border-action-yellow/30 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 text-sm font-bold transition-colors hover:bg-yellow-100 dark:hover:bg-yellow-900/40 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+                            Remover
+                        </button>
+</div>
+</div>
+</section>
+<!-- Add New Card Button -->
+<button class="w-full rounded-xl bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-bold text-lg py-4 px-6 flex items-center justify-center gap-3 shadow-lg shadow-green-200 dark:shadow-none transition-all transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+                Adicionar novo cartão
+            </button>
+<!-- Alternative Payment Methods -->
+<section aria-labelledby="other-methods" class="pt-4">
+<h2 class="text-lg font-bold text-text-main dark:text-white mb-4 px-1" id="other-methods">Outras opções</h2>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:bg-white dark:hover:bg-gray-700 transition-all">
+<div class="h-8 w-8 flex items-center justify-center" data-alt="Paypal icon">
+<span class="material-symbols-outlined text-3xl text-[#003087]">payments</span>
+</div>
+<span class="text-xs font-bold text-text-main dark:text-white">PayPal</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:bg-white dark:hover:bg-gray-700 transition-all">
+<div class="h-8 w-8 flex items-center justify-center" data-alt="Apple Pay icon">
+<span class="material-symbols-outlined text-3xl text-black dark:text-white">phone_iphone</span>
+</div>
+<span class="text-xs font-bold text-text-main dark:text-white">Apple Pay</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:bg-white dark:hover:bg-gray-700 transition-all">
+<div class="h-8 w-8 flex items-center justify-center" data-alt="Google Pay icon">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-gray-300">android</span>
+</div>
+<span class="text-xs font-bold text-text-main dark:text-white">Google Pay</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs font-semibold">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="agendamentos.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">calendar_month</span>
+      <span class="text-xs">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekóa - Meu Perfil</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f49bd",
+                        "primary-dark": "#0a348a",
+                        "secondary-orange": "#f97316",
+                        "secondary-green": "#22c55e",
+                        "secondary-yellow": "#eab308",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-gray-900 shadow-xl">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center bg-white dark:bg-gray-900 px-6 py-4 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-3 w-full">
+<!-- Logo Placeholder (Using an Icon for now as per instructions not to use external image links for logos unless provided) -->
+<div class="flex items-center justify-center text-primary">
+<span class="material-symbols-outlined !text-[32px]">spa</span>
+</div>
+<h1 class="text-primary dark:text-blue-400 text-2xl font-bold leading-tight tracking-tight flex-1">Meu Perfil</h1>
+</div>
+</header>
+<!-- Main Content Scrollable Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center pt-8 pb-6 px-4">
+<div class="relative group cursor-pointer">
+<div class="w-28 h-28 rounded-full border-4 border-white shadow-lg bg-gray-200 overflow-hidden" data-alt="Portrait of user Maria Silva looking friendly">
+<img alt="Foto de perfil de Maria Silva" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIY3jR-sPM5PRZ1CUICrr2QD7se_NN56TaIU2Fp9Q-Y-1fsuBAtC156s_QmD5mL-6PGVn26bjZUSF84f_cir2viq4fWEY-5OfOstSogi_aGAtgIevunChto8nfLbHGloSmk8_XO7G5tBWpgDWBFOfHcVQqc-3PvpOmT0CjHciEdF5rWPcvE_jZRTBcgtQYdb0wyCeSoU9zK8JfFEJNMF4kmgt6tBul70JRqwx4aH_CEJ3JqwHDOaD-Z1djK4qAgFCZo7s-ILb1RSw"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white rounded-full p-1.5 shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined !text-[16px]">edit</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h2 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">Maria Silva</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">maria.silva@email.com</p>
+</div>
+</section>
+<!-- Action Grid -->
+<section class="px-5">
+<div class="grid grid-cols-1 gap-4">
+<!-- Meus Agendamentos (Blue Medium) -->
+<a class="flex items-center w-full p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 active:bg-blue-100 transition-colors group" href="agendamentos.html">
+<div class="h-12 w-12 rounded-lg bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-200 flex items-center justify-center mr-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="font-semibold text-gray-900 dark:text-white text-base">Meus Agendamentos</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Ver histórico e próximos</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+<!-- Assinatura (Orange Highlight) -->
+<a class="flex items-center w-full p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 active:bg-orange-100 transition-colors group" href="assinatura.html">
+<div class="h-12 w-12 rounded-lg bg-orange-100 dark:bg-orange-800 text-orange-600 dark:text-orange-200 flex items-center justify-center mr-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="font-semibold text-gray-900 dark:text-white text-base">Assinatura</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Gerenciar seu plano</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+<!-- Configurações (Green Soft) -->
+<a class="flex items-center w-full p-4 rounded-xl bg-green-50 dark:bg-green-900/20 active:bg-green-100 transition-colors group" href="configuracoes.html">
+<div class="h-12 w-12 rounded-lg bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-200 flex items-center justify-center mr-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="font-semibold text-gray-900 dark:text-white text-base">Configurações da Conta</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Dados pessoais e segurança</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+<!-- Pagamentos (Light Blue) -->
+<a class="flex items-center w-full p-4 rounded-xl bg-sky-50 dark:bg-sky-900/20 active:bg-sky-100 transition-colors group" href="pagamentos.html">
+<div class="h-12 w-12 rounded-lg bg-sky-100 dark:bg-sky-800 text-sky-600 dark:text-sky-200 flex items-center justify-center mr-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="font-semibold text-gray-900 dark:text-white text-base">Métodos de Pagamento</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Cartões e faturas</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+<!-- Ajuda (Yellow Support) -->
+<button class="flex items-center w-full p-4 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 active:bg-yellow-100 transition-colors group">
+<div class="h-12 w-12 rounded-lg bg-yellow-100 dark:bg-yellow-800 text-yellow-600 dark:text-yellow-200 flex items-center justify-center mr-4 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">help</span>
+</div>
+<div class="flex-1 text-left">
+<h3 class="font-semibold text-gray-900 dark:text-white text-base">Ajuda / Suporte</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Fale conosco</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</button>
+<!-- Sair (Dark Blue Text) -->
+<button class="mt-4 flex items-center justify-center w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 active:bg-gray-50 transition-colors group mb-6">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 mr-2">logout</span>
+<span class="font-semibold text-primary dark:text-blue-400 text-base">Sair da conta</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs font-semibold">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="agendamentos.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">calendar_month</span>
+      <span class="text-xs">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+</div>
+</body></html>
