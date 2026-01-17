@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR" spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"><head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Language" content="pt-br"/>
+<meta name="grammarly" content="false"/>
+<meta name="spellcheck" content="false"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekóa - Rede de Apoio</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "primary-dark": "#1a4bb0",
+                        "background-light": "#FFFFFF", 
+                        "background-dark": "#101622",
+                        "surface-light": "#F8F9FB",
+                        "surface-dark": "#1E293B",
+                        "text-main": "#111318",
+                        "text-secondary": "#616f89",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                    boxShadow: {
+                        "soft": "0 2px 10px rgba(0, 0, 0, 0.03)",
+                        "card": "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for chrome/safari/opera */
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" class="bg-background-light dark:bg-background-dark text-text-main dark:text-white pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<div class="px-4 pt-4 pb-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">diversity_2</span>
+</div>
+<h2 class="text-primary dark:text-primary text-xl font-bold tracking-tight">Tekóa</h2>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-col w-full max-w-md mx-auto">
+<!-- Hero Text -->
+<div class="px-4 pt-6 pb-2">
+<h1 class="text-primary dark:text-white text-[32px] font-bold leading-tight mb-2">Rede de Apoio</h1>
+<p class="text-text-secondary dark:text-gray-400 text-base font-normal leading-relaxed">
+                Instituições e serviços que podem apoiar você na sua jornada de integração.
+            </p>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-4 sticky top-[65px] z-40 bg-background-light dark:bg-background-dark">
+<label class="relative flex w-full items-center">
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-text-secondary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="block w-full rounded-xl border-none bg-surface-light dark:bg-surface-dark py-4 pl-12 pr-4 text-text-main dark:text-white placeholder:text-text-secondary focus:ring-2 focus:ring-primary shadow-sm text-base" placeholder="O que você está procurando?" type="text"/>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="w-full overflow-x-auto no-scrollbar pb-2 px-4 flex gap-3">
+<a class="whitespace-nowrap flex h-10 items-center justify-center rounded-full bg-primary px-5 text-white shadow-soft transition-transform active:scale-95" href="rede-apoio.html"><span class="text-sm font-semibold">Todos</span></a>
+<a class="whitespace-nowrap flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark px-5 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-transparent dark:border-gray-700" href="rede-apoio.html"><span class="text-sm font-medium">Consulados</span></a>
+<a class="whitespace-nowrap flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark px-5 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-transparent dark:border-gray-700" href="rede-apoio.html"><span class="text-sm font-medium">ONGs</span></a>
+<a class="whitespace-nowrap flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark px-5 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-transparent dark:border-gray-700" href="rede-apoio.html"><span class="text-sm font-medium">Emprego</span></a>
+<a class="whitespace-nowrap flex h-10 items-center justify-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark px-5 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-transparent dark:border-gray-700" href="rede-apoio.html"><span class="text-sm font-medium">Saúde Mental</span></a>
+</div>
+<!-- Directory List -->
+<div class="px-4 pt-4 pb-8 grid gap-4">
+<!-- Card 1 -->
+<a href="apoio-1.html" class="group relative flex w-full flex-col overflow-hidden rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-card hover:shadow-lg transition-all active:scale-[0.99]">
+<div class="flex p-4 gap-4 items-start">
+<div class="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
+<img class="h-full w-full object-cover" data-alt="Logo of Alto Comissariado para as Migrações featuring abstract colorful shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrA19d4PP2kNuZ9cX_R_rfxBhr3DZOFwonmqqKGsr4VjxIoru4tCLOi2UzRYcroN-MS9YHGtNFIxgip_x8VGhDtYJ94pCr-6XTiw7Z0cJABxJTS5X8w14KX7b-UG_3TtC4IEcvXzaZQJDGjA2VPghntx4PoxkAoliugWZzL0hYxWJCGfyRo8uSSSFr6_hXM4_D3Ge5ijzLuKiW-A3GgTGYaYp-As0A3fu5hA1jaN0oMUyPoyeboyMVMRhXcs7sKXjz_ksqwZYD32M"/>
+</div>
+<div class="flex flex-1 flex-col gap-1">
+<div class="flex items-start justify-between">
+<span class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/30 px-2 py-1 text-xs font-medium text-primary dark:text-blue-300 ring-1 ring-inset ring-blue-700/10">Instituição Pública</span>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight mt-1">Alto Comissariado para as Migrações</h3>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400 text-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Lisboa, Portugal</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Card 2 -->
+<a href="apoio-2.html" class="group relative flex w-full flex-col overflow-hidden rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-card hover:shadow-lg transition-all active:scale-[0.99]">
+<div class="flex p-4 gap-4 items-start">
+<div class="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
+<img class="h-full w-full object-cover" data-alt="Symbolic red cross logo on white background representing health aid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuAgUfudVhI4vK1bhMAXhNMHxx7HLroOdBx7bu1LKFj-XpheHxRbqooCvvDR-bSqZ8kfChZkCZZMhj0Xcv-cOJUhvGZz8qOQ-qfT_6qwclNGgVRHpXtpGfabp6kswecr694NJXPVOWMcmcGIQyPs2w3hgyLiUnsibJpIXeCe4iL8ILMV85SLVLAD5dB36Fkgu53bdzpxazizWnCZWzYQKV-OZRf5GM4c9Y2cQSIkNcN5utWG1ACUriwga5q76ZP9N-jxAVAOmHJD0"/>
+</div>
+<div class="flex flex-1 flex-col gap-1">
+<div class="flex items-start justify-between">
+<span class="inline-flex items-center rounded-md bg-red-50 dark:bg-red-900/30 px-2 py-1 text-xs font-medium text-red-600 dark:text-red-300 ring-1 ring-inset ring-red-600/10">ONG / Saúde</span>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight mt-1">Cruz Vermelha Portuguesa</h3>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400 text-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Porto, Portugal</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Card 3 -->
+<a href="apoio-3.html" class="group relative flex w-full flex-col overflow-hidden rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-card hover:shadow-lg transition-all active:scale-[0.99]">
+<div class="flex p-4 gap-4 items-start">
+<div class="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
+<img class="h-full w-full object-cover" data-alt="Professional office building facade representing employment services" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqZ46SMT4Ygc-3bFte542edhCY8WP7JK6IZaMxL62_vlfFpWsaWVwsEVhfc6hlRyCepU3En_lf7Zyqo_8Lrw_KvzR8lDZEoqrNvwxMdOdGv-ydl3KT2L6lRcI9Tr8C7_u_N2odEU_mThbMvJfGPoeYhTA-IkQdMdZFEWp7teMzD3mP_C_2sCHt6mY7T6zHynHLBrS14za3VQuLdW1PD4d4bIGxMwaeOTfoK4qI1Mx11aTZV0IndmJ4dLEpSWnpMLX4hARp9Z3xUyk"/>
+</div>
+<div class="flex flex-1 flex-col gap-1">
+<div class="flex items-start justify-between">
+<span class="inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/30 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-300 ring-1 ring-inset ring-green-600/10">Emprego</span>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight mt-1">IEFP - Centro de Emprego</h3>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400 text-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Faro, Portugal</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Card 4 -->
+<div class="group relative flex w-full flex-col overflow-hidden rounded-xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-card hover:shadow-lg transition-all active:scale-[0.99]">
+<div class="flex p-4 gap-4 items-start">
+<div class="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
+<img class="h-full w-full object-cover" data-alt="Abstract community illustration with diverse people holding hands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZgG_q2sUf_0eGS4k_UZas6Sn3cFkg6L_J9sB_LPdxWS8GPfywyVHfldvioSlC_zINHpXhYgy9IQr2Ux56vPUKxmn_iWEiyZkuL0x4VicnxStWMGXXVC1UzYp0t7tumvIav4dCIrDPbten3XRTFycO_c0p0VX1SgFcsdxyfGSS18UVl7o8vJf92Dw_GJYwes9Dbs6DYYQIHZLnXrWx8RDDRkFi5WZklx2DnJlNVraTi6nN78WBYQDSlRsNIsyNdVJLNCBBUwcGUqo"/>
+</div>
+<div class="flex flex-1 flex-col gap-1">
+<div class="flex items-start justify-between">
+<span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-900/30 px-2 py-1 text-xs font-medium text-purple-700 dark:text-purple-300 ring-1 ring-inset ring-purple-600/10">Apoio Social</span>
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight mt-1">JRS - Serviço Jesuíta aos Refugiados</h3>
+<div class="flex items-center gap-1 text-text-secondary dark:text-gray-400 text-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Lisboa, Portugal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More (Optional visual indicator) -->
+<div class="flex justify-center pb-8 text-text-secondary dark:text-gray-500 text-sm">
+<p>Mostrando 4 de 24 resultados</p>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="agendamentos.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">calendar_month</span>
+      <span class="text-xs">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="blog.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+</body></html>
