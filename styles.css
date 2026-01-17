@@ -146,7 +146,7 @@ body {
   flex-direction: column;
   gap: 12px;
   margin-top: auto;
-  margin-bottom: 44px;
+  margin-bottom: calc(clamp(20px, 6vh, 64px) + env(safe-area-inset-bottom, 0px));
   align-items: center;
 }
 
