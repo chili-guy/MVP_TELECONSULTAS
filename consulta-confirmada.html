@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR" spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"><head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Language" content="pt-br"/>
+<meta name="grammarly" content="false"/>
+<meta name="spellcheck" content="false"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consulta Confirmada - Tekóa</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d", // Laranja Destaque
+                        "secondary-blue": "#1a3b5d", // Azul Escuro for headers
+                        "success-green": "#4caf50", // Verde Suave for success
+                        "background-light": "#ffffff",
+                        "background-dark": "#221910",
+                        "text-main": "#181411",
+                        "text-muted": "#8a7560",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" class="bg-background-light dark:bg-background-dark text-text-main flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between px-4 py-3">
+<!-- Logo Placeholder (Using text/icon for representation) -->
+<div class="flex items-center gap-2">
+<div class="bg-secondary-blue rounded-full p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-size: 20px;">diversity_3</span>
+</div>
+<span class="text-secondary-blue font-bold text-lg tracking-tight hidden sm:block">Tekóa</span>
+</div>
+<h1 class="text-secondary-blue text-lg font-bold leading-tight flex-1 text-center pr-8">Consulta Confirmada</h1>
+<div class="w-6"></div> <!-- Spacer for centering title -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col w-full max-w-md mx-auto p-6 overflow-y-auto pb-24">
+<!-- Success Animation/Icon -->
+<div class="flex flex-col items-center justify-center mt-4 mb-6 text-center">
+<div class="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-success-green" style="font-size: 48px;">check_circle</span>
+</div>
+<h2 class="text-success-green text-2xl font-bold leading-tight px-4">Consulta agendada com sucesso!</h2>
+</div>
+<!-- Appointment Card -->
+<div class="bg-white dark:bg-[#2c241b] rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-gray-100 dark:border-gray-700 overflow-hidden mb-6">
+<!-- Professional Info -->
+<div class="flex items-center gap-4 p-5 border-b border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-white/5">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 shadow-sm border-2 border-white dark:border-gray-600" data-alt="Portrait of Dr. Ana Silva, a smiling professional woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMIIADCv4uwFt83p84-kRxbZGRZiHsPTg-o-tJUf8SNtsOfaXuTIBOum1D_6erLgwe2Ek2VHkCKt3xs13h6OKuI4PGLKY-OH2aAhucHhFg4_HfNd5_QkSifaBAwdFkxD94ocwAB30IYhuThqhJTJm1WJj4mQNE4lOklYxw_rz4tEPdPLlFKSEwyA2-3SscZspBsF-mM2yCrC2vI_QAfdnlOZrkaTafrS4XImKkdhfxdnNVaV3rwuJgKyLa1kxuF0mYOxSGGS5Ei5E");'>
+</div>
+<div class="flex flex-col">
+<p class="text-text-main dark:text-white text-lg font-bold leading-tight">Dr. Ana Silva</p>
+<p class="text-text-muted text-sm font-medium">Psicóloga Intercultural</p>
+</div>
+</div>
+<!-- Details List -->
+<div class="p-5 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">calendar_month</span>
+</div>
+<div>
+<p class="text-text-muted text-xs uppercase tracking-wider font-semibold">Data</p>
+<p class="text-text-main dark:text-gray-100 font-medium">15 de Outubro</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">schedule</span>
+</div>
+<div>
+<p class="text-text-muted text-xs uppercase tracking-wider font-semibold">Horário</p>
+<p class="text-text-main dark:text-gray-100 font-medium">14:00</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">timer</span>
+</div>
+<div>
+<p class="text-text-muted text-xs uppercase tracking-wider font-semibold">Duração</p>
+<p class="text-text-main dark:text-gray-100 font-medium">50 minutos</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Informational Text -->
+<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl flex gap-3 items-start mb-8">
+<span class="material-symbols-outlined text-secondary-blue dark:text-blue-300 mt-0.5 shrink-0">info</span>
+<div class="text-sm text-secondary-blue dark:text-blue-100 leading-relaxed">
+<p class="mb-1">O link da consulta será enviado por e-mail.</p>
+<p>Também ficará disponível no seu dashboard.</p>
+</div>
+</div>
+<!-- CTA Button -->
+<a class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-orange-200 dark:shadow-none transition-all duration-200 active:scale-95 flex items-center justify-center gap-2" href="dashboard.html"><span>Ir para meu dashboard</span><span class="material-symbols-outlined">arrow_forward</span></a>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-primary" href="psicologos.html">
+      <span class="material-symbols-outlined text-2xl mb-1" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+      <span class="text-xs font-semibold">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="blog.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+<div class="h-[env(safe-area-inset-bottom)] bg-white dark:bg-[#1a120b] w-full fixed bottom-0 z-[-1]"></div>
+</body></html>

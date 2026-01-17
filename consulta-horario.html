@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR" spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"><head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Language" content="pt-br"/>
+<meta name="grammarly" content="false"/>
+<meta name="spellcheck" content="false"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekóa - Selecionar Horário</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+              "surface-light": "#ffffff",
+            },
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom precise safe area spacing for bottom nav/button */
+        .safe-bottom-spacing {
+            padding-bottom: calc(80px + 64px + env(safe-area-inset-bottom)); 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  
+<link rel="stylesheet" href="brand.css"/>
+</head>
+<body spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" class="bg-white text-[#111318] antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden bg-white max-w-md mx-auto shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between bg-white px-4 py-3 shadow-sm">
+<a class="flex size-10 items-center justify-center rounded-full text-[#111318] hover:bg-gray-100 transition-colors" href="psicologo-1.html"><span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span></a>
+<div class="flex flex-col items-center">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Tekóa</span>
+<h1 class="text-lg font-bold leading-tight text-[#111318]">Selecionar Horário</h1>
+</div>
+<!-- Placeholder for Logo/Profile or empty space for balance -->
+<div class="flex size-10 items-center justify-center text-primary">
+<span class="material-symbols-outlined filled" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto safe-bottom-spacing px-4 pt-2">
+<!-- Calendar Section -->
+<section class="mt-4">
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-lg font-bold text-[#111318]">Escolha o dia</h2>
+<span class="text-sm font-medium text-primary">Outubro 2023</span>
+</div>
+<!-- Calendar Widget -->
+<div class="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+<div class="flex items-center justify-between mb-4 px-2">
+<button class="flex size-8 items-center justify-center rounded-full hover:bg-gray-100 text-gray-600">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<p class="text-base font-bold text-[#111318]">Outubro</p>
+<button class="flex size-8 items-center justify-center rounded-full hover:bg-gray-100 text-gray-600">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 text-center mb-2">
+<span class="text-xs font-bold text-gray-400">D</span>
+<span class="text-xs font-bold text-gray-400">S</span>
+<span class="text-xs font-bold text-gray-400">T</span>
+<span class="text-xs font-bold text-gray-400">Q</span>
+<span class="text-xs font-bold text-gray-400">Q</span>
+<span class="text-xs font-bold text-gray-400">S</span>
+<span class="text-xs font-bold text-gray-400">S</span>
+</div>
+<div class="grid grid-cols-7 gap-y-2">
+<!-- Empty start days -->
+<span class="h-10"></span>
+<span class="h-10"></span>
+<span class="h-10"></span>
+<span class="h-10"></span>
+<!-- Days -->
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-gray-400" disabled="">1</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">2</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">3</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">4</button>
+<!-- Selected Day -->
+<button class="relative flex h-10 w-full items-center justify-center">
+<div class="flex size-9 items-center justify-center rounded-full bg-primary text-white shadow-md shadow-blue-200">
+<span class="text-sm font-bold">5</span>
+</div>
+</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">6</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">7</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">8</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">9</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">10</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">11</button>
+<button class="flex h-10 w-full items-center justify-center rounded-full text-sm font-medium text-[#111318] hover:bg-gray-100">12</button>
+</div>
+</div>
+</section>
+<!-- Time Slots Section -->
+<section class="mt-8">
+<h3 class="mb-4 text-lg font-bold text-[#111318]">Horários disponíveis</h3>
+<div class="grid grid-cols-3 gap-3">
+<button class="group flex h-12 w-full items-center justify-center rounded-xl border border-gray-200 bg-white transition-all hover:border-primary/50 hover:bg-blue-50 focus:border-primary focus:bg-primary focus:text-white active:scale-95">
+<span class="text-sm font-semibold text-[#111318] group-focus:text-white">09:00</span>
+</button>
+<button class="group flex h-12 w-full items-center justify-center rounded-xl border border-gray-200 bg-white transition-all hover:border-primary/50 hover:bg-blue-50 focus:border-primary focus:bg-primary focus:text-white active:scale-95">
+<span class="text-sm font-semibold text-[#111318] group-focus:text-white">10:00</span>
+</button>
+<button class="group flex h-12 w-full items-center justify-center rounded-xl border border-gray-200 bg-white transition-all hover:border-primary/50 hover:bg-blue-50 focus:border-primary focus:bg-primary focus:text-white active:scale-95">
+<span class="text-sm font-semibold text-[#111318] group-focus:text-white">11:30</span>
+</button>
+<!-- Selected Time Slot Example -->
+<button class="group relative flex h-12 w-full items-center justify-center rounded-xl bg-primary text-white shadow-md shadow-blue-200 transition-all active:scale-95 ring-2 ring-primary ring-offset-1">
+<span class="text-sm font-bold">14:00</span>
+<div class="absolute -right-1 -top-1 flex size-4 items-center justify-center rounded-full bg-white text-primary">
+<span class="material-symbols-outlined text-[10px] font-bold">check</span>
+</div>
+</button>
+<button class="group flex h-12 w-full items-center justify-center rounded-xl border border-gray-200 bg-white transition-all hover:border-primary/50 hover:bg-blue-50 focus:border-primary focus:bg-primary focus:text-white active:scale-95">
+<span class="text-sm font-semibold text-[#111318] group-focus:text-white">15:30</span>
+</button>
+<button class="group flex h-12 w-full items-center justify-center rounded-xl border border-gray-200 bg-white opacity-50 cursor-not-allowed">
+<span class="text-sm font-medium text-gray-400 decoration-slate-400 line-through">16:00</span>
+</button>
+<button class="group flex h-12 w-full items-center justify-center rounded-xl border border-gray-200 bg-white transition-all hover:border-primary/50 hover:bg-blue-50 focus:border-primary focus:bg-primary focus:text-white active:scale-95">
+<span class="text-sm font-semibold text-[#111318] group-focus:text-white">17:00</span>
+</button>
+</div>
+</section>
+<!-- Selection Summary -->
+<div class="mt-8 rounded-xl bg-blue-50 p-4">
+<div class="flex gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div>
+<p class="text-xs font-semibold uppercase text-gray-500">Agendando para</p>
+<p class="text-sm font-bold text-[#111318]">Quinta-feira, 5 de Outubro às 14:00</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button + Bottom Nav Container -->
+<div class="fixed bottom-0 w-full max-w-md z-30">
+<!-- Gradient fade above buttons -->
+<div class="h-8 w-full bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+<div class="bg-white px-4 pb-4 pt-0">
+<!-- CTA Button -->
+<a class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-blue-200 transition-transform active:scale-[0.98] mb-4" href="consulta-pacote.html"><span>Agendar consulta</span><span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm h-20">
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="dashboard.html">
+      <span class="material-symbols-outlined text-2xl mb-1">home</span>
+      <span class="text-xs">Início</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-primary" href="psicologos.html">
+      <span class="material-symbols-outlined text-2xl mb-1" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+      <span class="text-xs font-semibold">Agendar</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="blog.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">article</span>
+      <span class="text-xs">Conteúdos</span>
+    </a>
+    <a class="inline-flex flex-col items-center justify-center px-5 text-text-secondary dark:text-text-on-dark/70 hover:text-primary dark:hover:text-primary" href="perfil.html">
+      <span class="material-symbols-outlined !fill-0 text-2xl mb-1">person</span>
+      <span class="text-xs">Perfil</span>
+    </a>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+</body></html>
