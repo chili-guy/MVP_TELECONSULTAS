@@ -496,6 +496,20 @@
     )}`;
   };
 
+  const renderProfile = async () => {
+    const nameEl = document.querySelector("[data-user-name]");
+    const emailEl = document.querySelector("[data-user-email]");
+    const avatarEl = document.querySelector("[data-user-avatar]");
+    if (!nameEl && !emailEl && !avatarEl) return;
+    const data = await apiRequest("/me");
+    if (!data?.authenticated) return;
+    if (nameEl) nameEl.textContent = data.user?.name || "Usuário";
+    if (emailEl) emailEl.textContent = data.user?.email || "-";
+    if (avatarEl && data.user?.name) {
+      avatarEl.alt = `Foto de perfil de ${data.user.name}`;
+    }
+  };
+
   const handleClick = async (event) => {
     const target = event.target.closest("[data-action]");
     if (!target) return;
@@ -563,6 +577,16 @@
         showToast("Inscrição confirmada!");
         window.location.href = target.dataset.redirect || "eventos-proximos.html";
       }
+      return;
+    }
+
+    if (action === "logout") {
+      event.preventDefault();
+      const result = await apiRequest("/logout", { method: "POST" });
+      if (result?.ok) {
+        window.location.href = "entrada.html";
+      }
+      return;
     }
   };
 
@@ -579,6 +603,7 @@
     renderConfirmation();
     renderPsychologistProfile();
     renderScheduleSummary();
+    renderProfile();
   };
 
   document.addEventListener("click", handleClick);
