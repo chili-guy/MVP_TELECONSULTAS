@@ -731,6 +731,18 @@
       });
     });
 
+    if (cta) {
+      cta.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const selection = getSelection();
+        const scheduledAt =
+          cta.dataset.scheduledAt || selection.scheduledAt || defaultSelection.scheduledAt;
+        setSelection({ scheduledAt });
+        window.location.href = cta.getAttribute("href") || "consulta-pacote.html";
+      });
+    }
+
     applySelection(selectedDay, selectedTime);
   };
 
