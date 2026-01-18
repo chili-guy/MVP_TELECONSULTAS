@@ -813,6 +813,14 @@
     applySelection(selectedDay, selectedTime);
   };
 
+  const initCadastroBackGuard = () => {
+    const registerButton = document.querySelector("[data-register-submit]");
+    if (!registerButton) return;
+    window.addEventListener("popstate", () => {
+      window.location.href = "escolha-perfil.html";
+    });
+  };
+
   const renderProfile = async () => {
     const nameEl = document.querySelector("[data-user-name]");
     const emailEl = document.querySelector("[data-user-email]");
@@ -1054,6 +1062,7 @@
     initSchedulePicker();
     renderPsychologistSignup();
     updatePsychologistStatusUI();
+    initCadastroBackGuard();
     renderProfile();
     renderDashboardGreeting();
   };
