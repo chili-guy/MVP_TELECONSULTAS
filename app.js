@@ -96,7 +96,7 @@
       const tags = Array.isArray(item.tags) ? item.tags : [];
       const card = document.createElement("article");
       card.className =
-        "bg-white dark:bg-surface-dark rounded-3xl p-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 flex flex-col gap-4";
+        "w-full bg-white dark:bg-surface-dark rounded-3xl p-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 flex flex-col gap-4";
       card.innerHTML = `
         <div class="p-4 flex flex-col gap-4">
           <div class="flex gap-4 items-start">
