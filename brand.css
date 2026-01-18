@@ -28,6 +28,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 900px) {
+  body.has-app-frame {
+    background: #e6e9f2;
+  }
+
+  .app-frame {
+    width: min(100%, 520px);
+    margin: 24px auto;
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+    overflow: hidden;
+    background: var(--brand-surface);
+  }
+}
+
 h1,
 h2,
 h3,
