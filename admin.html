@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR" spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="pt-br" />
+    <meta name="grammarly" content="false" />
+    <meta name="spellcheck" content="false" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin - Tekoa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ee8c2b",
+              "background-light": "#ffffff",
+              "background-dark": "#181411",
+              "blue-dark": "#0d3b66",
+              "blue-medium": "#3b82f6",
+              "blue-light": "#bfdbfe",
+              "green-soft": "#a7c957",
+              "yellow-support": "#ffc857",
+              "text-primary": "#181411",
+              "text-secondary": "#897561",
+              "text-on-dark": "#f8f7f6",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "1.5rem",
+              xl: "2rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <link rel="stylesheet" href="brand.css" />
+  </head>
+  <body
+    spellcheck="false"
+    data-gramm="false"
+    data-gramm_editor="false"
+    data-enable-grammarly="false"
+    class="bg-background-light dark:bg-background-dark font-display text-text-primary dark:text-text-on-dark has-app-frame"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24 app-frame">
+      <header class="flex flex-col gap-1 bg-background-light dark:bg-background-dark p-4 pb-2 sticky top-0 z-10">
+        <div class="flex h-12 items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div
+              class="flex size-10 shrink-0 items-center justify-center rounded-full bg-cover bg-center bg-no-repeat"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTiJKQL3vq4GmSUuK5dlDuVXqXFTrHrmuG82MOkGtMNM34cWDwLPm2R5Xi1HmpaS9EUayJ3auZ_nqjB9E6l4qk0W3Vklh_px1UtFqGR7Oi3oM8Xs4AtatdfLorzHFPeuFVhMjyyMohfGLv4dfFKBj4KKPaUs6OHzlc2-LsOMKAEjl_oTAgn7TQIPknCX9N0Nv6yQ3Bn7uCdsZvIEUp1J-HcDN4cTAKoC9iaryd2FdQD9lVf5lRpIrsDau4Lll0E4nQua35PhbrTvE");'
+            ></div>
+            <p class="font-bold text-lg text-blue-dark dark:text-primary">Tekoa</p>
+          </div>
+          <a class="text-sm text-blue-dark dark:text-primary" href="dashboard.html">Voltar</a>
+        </div>
+        <p class="text-text-secondary text-sm">Admin dashboard</p>
+      </header>
+
+      <section class="p-4">
+        <div class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10">
+          <p class="text-sm text-text-secondary">Usuario</p>
+          <p class="text-base font-semibold" data-admin-user>Carregando...</p>
+          <a class="text-sm text-blue-dark dark:text-primary mt-2 inline-block" href="entrada.html"
+            >Ir para login</a
+          >
+        </div>
+      </section>
+
+      <section class="px-4 pb-4">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Principais estatisticas</h2>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Usuarios</p>
+            <p class="text-xl font-bold" data-stat="users">0</p>
+          </div>
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Blog</p>
+            <p class="text-xl font-bold" data-stat="blog">0</p>
+          </div>
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Noticias</p>
+            <p class="text-xl font-bold" data-stat="news">0</p>
+          </div>
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Videos</p>
+            <p class="text-xl font-bold" data-stat="videos">0</p>
+          </div>
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Eventos</p>
+            <p class="text-xl font-bold" data-stat="events">0</p>
+          </div>
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Rede de apoio</p>
+            <p class="text-xl font-bold" data-stat="support">0</p>
+          </div>
+          <div class="rounded-xl bg-blue-light/60 p-3">
+            <p class="text-xs text-text-secondary">Testes</p>
+            <p class="text-xl font-bold" data-stat="tests">0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pb-6">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Usuarios</h2>
+        <div class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="text-xs text-text-secondary">
+                <th class="py-2">Nome</th>
+                <th class="py-2">Email</th>
+                <th class="py-2">Admin</th>
+                <th class="py-2">Criado</th>
+                <th class="py-2 text-right">Acoes</th>
+              </tr>
+            </thead>
+            <tbody data-admin-users></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="px-4 pb-8">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Noticias</h2>
+        <div class="flex flex-col gap-4">
+          <div data-admin-list="news" class="flex flex-col gap-2"></div>
+          <form data-admin-form="news" class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10 flex flex-col gap-3">
+            <input class="w-full rounded-lg border-gray-200" name="title" placeholder="Titulo" />
+            <input class="w-full rounded-lg border-gray-200" name="summary" placeholder="Resumo" />
+            <input class="w-full rounded-lg border-gray-200" name="source" placeholder="Fonte" />
+            <input class="w-full rounded-lg border-gray-200" name="url" placeholder="URL" />
+            <input class="w-full rounded-lg border-gray-200" name="imageUrl" placeholder="Imagem URL" />
+            <div class="flex items-center gap-3">
+              <button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold" type="submit">Salvar</button>
+              <button class="px-4 py-2 rounded-full bg-gray-200 text-sm" data-admin-clear='[data-admin-form="news"]'>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="px-4 pb-8">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Eventos</h2>
+        <div class="flex flex-col gap-4">
+          <div data-admin-list="events" class="flex flex-col gap-2"></div>
+          <form data-admin-form="events" class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10 flex flex-col gap-3">
+            <input class="w-full rounded-lg border-gray-200" name="title" placeholder="Titulo" />
+            <textarea class="w-full rounded-lg border-gray-200" name="description" placeholder="Descricao"></textarea>
+            <input class="w-full rounded-lg border-gray-200" name="category" placeholder="Categoria" />
+            <input class="w-full rounded-lg border-gray-200" name="dateTime" placeholder="Data e hora (ISO)" />
+            <input class="w-full rounded-lg border-gray-200" name="imageUrl" placeholder="Imagem URL" />
+            <input class="w-full rounded-lg border-gray-200" name="status" placeholder="Status (upcoming/past)" />
+            <label class="text-sm flex items-center gap-2">
+              <input type="checkbox" name="isRecorded" />
+              Gravado
+            </label>
+            <div class="flex items-center gap-3">
+              <button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold" type="submit">Salvar</button>
+              <button class="px-4 py-2 rounded-full bg-gray-200 text-sm" data-admin-clear='[data-admin-form="events"]'>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="px-4 pb-8">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Blog</h2>
+        <div class="flex flex-col gap-4">
+          <div data-admin-list="blog" class="flex flex-col gap-2"></div>
+          <form data-admin-form="blog" class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10 flex flex-col gap-3">
+            <input class="w-full rounded-lg border-gray-200" name="title" placeholder="Titulo" />
+            <input class="w-full rounded-lg border-gray-200" name="category" placeholder="Categoria" />
+            <input class="w-full rounded-lg border-gray-200" name="summary" placeholder="Resumo" />
+            <input class="w-full rounded-lg border-gray-200" name="readMinutes" placeholder="Minutos de leitura" />
+            <textarea class="w-full rounded-lg border-gray-200" name="content" placeholder="Conteudo"></textarea>
+            <input class="w-full rounded-lg border-gray-200" name="imageUrl" placeholder="Imagem URL" />
+            <div class="flex items-center gap-3">
+              <button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold" type="submit">Salvar</button>
+              <button class="px-4 py-2 rounded-full bg-gray-200 text-sm" data-admin-clear='[data-admin-form="blog"]'>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="px-4 pb-8">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Videos</h2>
+        <div class="flex flex-col gap-4">
+          <div data-admin-list="videos" class="flex flex-col gap-2"></div>
+          <form data-admin-form="videos" class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10 flex flex-col gap-3">
+            <input class="w-full rounded-lg border-gray-200" name="title" placeholder="Titulo" />
+            <input class="w-full rounded-lg border-gray-200" name="category" placeholder="Categoria" />
+            <input class="w-full rounded-lg border-gray-200" name="duration" placeholder="Duracao" />
+            <input class="w-full rounded-lg border-gray-200" name="channel" placeholder="Canal" />
+            <input class="w-full rounded-lg border-gray-200" name="url" placeholder="URL" />
+            <input class="w-full rounded-lg border-gray-200" name="imageUrl" placeholder="Imagem URL" />
+            <div class="flex items-center gap-3">
+              <button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold" type="submit">Salvar</button>
+              <button class="px-4 py-2 rounded-full bg-gray-200 text-sm" data-admin-clear='[data-admin-form="videos"]'>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="px-4 pb-8">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Rede de apoio</h2>
+        <div class="flex flex-col gap-4">
+          <div data-admin-list="support" class="flex flex-col gap-2"></div>
+          <form data-admin-form="support" class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10 flex flex-col gap-3">
+            <input class="w-full rounded-lg border-gray-200" name="name" placeholder="Nome" />
+            <input class="w-full rounded-lg border-gray-200" name="category" placeholder="Categoria" />
+            <input class="w-full rounded-lg border-gray-200" name="city" placeholder="Cidade" />
+            <input class="w-full rounded-lg border-gray-200" name="country" placeholder="Pais" />
+            <textarea class="w-full rounded-lg border-gray-200" name="description" placeholder="Descricao"></textarea>
+            <input class="w-full rounded-lg border-gray-200" name="phone" placeholder="Telefone" />
+            <input class="w-full rounded-lg border-gray-200" name="email" placeholder="Email" />
+            <input class="w-full rounded-lg border-gray-200" name="website" placeholder="Website" />
+            <input class="w-full rounded-lg border-gray-200" name="tags" placeholder="Tags (separadas por virgula)" />
+            <input class="w-full rounded-lg border-gray-200" name="imageUrl" placeholder="Imagem URL" />
+            <div class="flex items-center gap-3">
+              <button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold" type="submit">Salvar</button>
+              <button class="px-4 py-2 rounded-full bg-gray-200 text-sm" data-admin-clear='[data-admin-form="support"]'>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="px-4 pb-8">
+        <h2 class="text-blue-dark dark:text-primary text-lg font-semibold mb-3">Testes</h2>
+        <div class="flex flex-col gap-4">
+          <div data-admin-list="tests" class="flex flex-col gap-2"></div>
+          <form data-admin-form="tests" class="rounded-xl bg-white/70 dark:bg-white/5 p-4 border border-gray-100 dark:border-white/10 flex flex-col gap-3">
+            <input class="w-full rounded-lg border-gray-200" name="name" placeholder="Nome" />
+            <input class="w-full rounded-lg border-gray-200" name="category" placeholder="Categoria" />
+            <input class="w-full rounded-lg border-gray-200" name="durationMinutes" placeholder="Duracao (min)" />
+            <div class="flex items-center gap-3">
+              <button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold" type="submit">Salvar</button>
+              <button class="px-4 py-2 rounded-full bg-gray-200 text-sm" data-admin-clear='[data-admin-form="tests"]'>Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
+
