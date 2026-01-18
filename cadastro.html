@@ -31,7 +31,10 @@
             </p>
             <div class="form">
               <label>Foto de perfil</label>
-              <input type="file" accept="image/png,image/jpeg" />
+              <div style="width:72px;height:72px;border-radius:999px;overflow:hidden;background:#e5e7eb;margin-bottom:8px;">
+                <img alt="Prévia da foto" data-photo-key="user" style="width:100%;height:100%;object-fit:cover;display:block;" />
+              </div>
+              <input type="file" accept="image/png,image/jpeg" data-photo-input="user" data-photo-target="[data-photo-key='user']" />
               <p class="tiny muted">Recomendado: 800x800px, JPG/PNG, até 5MB.</p>
               <label>Nome completo</label>
               <input placeholder="Digite seu nome completo" data-register-name />

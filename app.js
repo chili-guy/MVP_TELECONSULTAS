@@ -2,6 +2,7 @@
   const API = "/api";
   const STORAGE_KEY = "tekoa_selection";
   const PSYCH_SIGNUP_KEY = "tekoa_psychologist_signup";
+  const PHOTO_STORE_KEY = "tekoa_profile_photos";
 
   const defaultSelection = {
     psychologistId: "psy-1",
@@ -36,6 +37,21 @@
   const setPsychSignup = (patch) => {
     const next = { ...getPsychSignup(), ...patch };
     localStorage.setItem(PSYCH_SIGNUP_KEY, JSON.stringify(next));
+    return next;
+  };
+
+  const getPhotoStore = () => {
+    try {
+      const raw = localStorage.getItem(PHOTO_STORE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
+    }
+  };
+
+  const setPhotoStore = (patch) => {
+    const next = { ...getPhotoStore(), ...patch };
+    localStorage.setItem(PHOTO_STORE_KEY, JSON.stringify(next));
     return next;
   };
 
@@ -634,6 +650,55 @@
     }
   };
 
+  const applyPhoto = (key, dataUrl, targetSelector) => {
+    const targets = [];
+    if (targetSelector) {
+      targets.push(...document.querySelectorAll(targetSelector));
+    }
+    targets.push(...document.querySelectorAll(`[data-photo-key="${key}"]`));
+    targets.forEach((target) => {
+      if (!target) return;
+      if (target.tagName === "IMG") {
+        target.src = dataUrl;
+      } else {
+        target.style.backgroundImage = `url("${dataUrl}")`;
+      }
+    });
+  };
+
+  const initPhotoUploads = () => {
+    const store = getPhotoStore();
+    Object.entries(store).forEach(([key, dataUrl]) => {
+      applyPhoto(key, dataUrl);
+    });
+    document.querySelectorAll("[data-photo-input]").forEach((input) => {
+      const key = input.dataset.photoInput;
+      const targetSelector = input.dataset.photoTarget;
+      if (!key) return;
+      if (store[key]) applyPhoto(key, store[key], targetSelector);
+      input.addEventListener("change", () => {
+        const file = input.files?.[0];
+        if (!file) return;
+        if (!file.type.startsWith("image/")) {
+          showToast("Selecione uma imagem válida.", "error");
+          return;
+        }
+        if (file.size > 5 * 1024 * 1024) {
+          showToast("A imagem deve ter até 5MB.", "error");
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = () => {
+          const dataUrl = reader.result;
+          if (typeof dataUrl !== "string") return;
+          setPhotoStore({ [key]: dataUrl });
+          applyPhoto(key, dataUrl, targetSelector);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+  };
+
   const initSchedulePicker = () => {
     const calendarGrid = document.querySelector("[data-calendar-grid]");
     const calendarLabel = document.querySelector("[data-calendar-label]");
@@ -1063,6 +1128,7 @@
     renderPsychologistSignup();
     updatePsychologistStatusUI();
     initCadastroBackGuard();
+    initPhotoUploads();
     renderProfile();
     renderDashboardGreeting();
   };
