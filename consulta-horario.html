@@ -54,6 +54,9 @@
         .safe-bottom-spacing {
             padding-bottom: calc(80px + 64px + env(safe-area-inset-bottom)); 
         }
+        .cta-safe {
+            padding-bottom: calc(80px + 12px + env(safe-area-inset-bottom));
+        }
     </style>
 <style>
     body {
@@ -173,7 +176,7 @@
 <div class="fixed bottom-0 w-full max-w-md z-30">
 <!-- Gradient fade above buttons -->
 <div class="h-8 w-full bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-<div class="bg-white px-4 pb-4 pt-0">
+<div class="bg-white px-4 pb-4 pt-0 cta-safe">
 <!-- CTA Button -->
 <a class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-blue-200 transition-transform active:scale-[0.98] mb-4" href="consulta-pacote.html" data-action="set-schedule" data-scheduled-at="2024-10-05T14:00:00Z"><span>Agendar consulta</span><span class="material-symbols-outlined text-lg">arrow_forward</span></a>
 <!-- Bottom Navigation -->
