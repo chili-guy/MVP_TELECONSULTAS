@@ -87,7 +87,9 @@
   };
 
   const renderPsychologists = async () => {
-    const container = document.querySelector("[data-psychologists-list]");
+    const container =
+      document.querySelector("#psychologists-list") ||
+      document.querySelector("[data-psychologists-list]");
     if (!container) return;
     const data = await apiRequest("/psychologists");
     if (!data) return;
