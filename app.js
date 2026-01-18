@@ -137,7 +137,7 @@
             <p class="text-lg font-bold text-[#111318] dark:text-white">€${(item.price_cents || 1700) / 100}</p>
           </div>
         </div>
-        <a class="w-full bg-primary hover:bg-primary/90 text-white font-semibold h-12 rounded-full transition-all active:scale-[0.98] flex items-center justify-center gap-2" href="psicologo-perfil.html" data-action="select-psychologist" data-psychologist-id="${
+        <a class="w-full -mx-4 px-4 bg-primary hover:bg-primary/90 text-white font-semibold h-12 rounded-full transition-all active:scale-[0.98] flex items-center justify-center gap-2" href="psicologo-perfil.html" data-action="select-psychologist" data-psychologist-id="${
           item.id
         }"><span>Ver perfil</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span></a>
       `;
