@@ -978,6 +978,12 @@
       return;
     }
 
+    if (action === "go-profile-choice") {
+      event.preventDefault();
+      window.location.href = "escolha-perfil.html";
+      return;
+    }
+
     if (action === "checkout") {
       event.preventDefault();
       const selection = getSelection();
