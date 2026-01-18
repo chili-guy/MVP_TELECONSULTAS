@@ -98,48 +98,52 @@
       card.className =
         "bg-white dark:bg-surface-dark rounded-3xl p-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 flex flex-col gap-4";
       card.innerHTML = `
-        <div class="flex gap-4 items-start">
-          <div class="size-20 shrink-0 rounded-full overflow-hidden bg-gray-200">
-            <img alt="${item.name}" class="w-full h-full object-cover" src="${item.image_url || ""}"/>
-          </div>
-          <div class="flex flex-col flex-1">
-            <div class="flex justify-between items-start">
-              <div>
-                <h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight">${item.name}</h3>
-                <p class="text-primary text-sm font-medium">${item.title || "Psicólogo"}</p>
+        <div class="p-4 flex flex-col gap-4">
+          <div class="flex gap-4 items-start">
+            <div class="size-20 shrink-0 rounded-full overflow-hidden bg-gray-200">
+              <img alt="${item.name}" class="w-full h-full object-cover" src="${item.image_url || ""}"/>
+            </div>
+            <div class="flex flex-col flex-1">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight">${item.name}</h3>
+                  <p class="text-primary text-sm font-medium">${item.title || "Psicólogo"}</p>
+                </div>
+                <div class="flex items-center gap-1 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-1 rounded-lg">
+                  <span class="material-symbols-outlined text-yellow-500 text-[16px] leading-none">star</span>
+                  <span class="text-xs font-bold text-yellow-700 dark:text-yellow-500">${item.rating || "-"}</span>
+                </div>
               </div>
-              <div class="flex items-center gap-1 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-1 rounded-lg">
-                <span class="material-symbols-outlined text-yellow-500 text-[16px] leading-none">star</span>
-                <span class="text-xs font-bold text-yellow-700 dark:text-yellow-500">${item.rating || "-"}</span>
+              <div class="flex flex-wrap gap-1 mt-2">
+                ${tags
+                  .map(
+                    (tag) =>
+                      `<span class="px-2 py-1 bg-surface-light dark:bg-background-dark rounded-md text-xs text-gray-600 dark:text-gray-300">${tag}</span>`
+                  )
+                  .join("")}
               </div>
             </div>
-            <div class="flex flex-wrap gap-1 mt-2">
-              ${tags
-                .map(
-                  (tag) =>
-                    `<span class="px-2 py-1 bg-surface-light dark:bg-background-dark rounded-md text-xs text-gray-600 dark:text-gray-300">${tag}</span>`
-                )
-                .join("")}
+          </div>
+          <div class="h-px w-full bg-gray-100 dark:bg-gray-700"></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+              <div class="flex items-center gap-1.5 text-gray-500 dark:text-gray-400 mb-1">
+                <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                <span class="text-xs">Próxima vaga</span>
+              </div>
+              <p class="text-[#111318] dark:text-white text-sm font-semibold">Hoje, 14:00</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-gray-500 dark:text-gray-400">Sessão (50 min)</p>
+              <p class="text-lg font-bold text-[#111318] dark:text-white">€${(item.price_cents || 1700) / 100}</p>
             </div>
           </div>
         </div>
-        <div class="h-px w-full bg-gray-100 dark:bg-gray-700"></div>
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col">
-            <div class="flex items-center gap-1.5 text-gray-500 dark:text-gray-400 mb-1">
-              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
-              <span class="text-xs">Próxima vaga</span>
-            </div>
-            <p class="text-[#111318] dark:text-white text-sm font-semibold">Hoje, 14:00</p>
-          </div>
-          <div class="text-right">
-            <p class="text-xs text-gray-500 dark:text-gray-400">Sessão (50 min)</p>
-            <p class="text-lg font-bold text-[#111318] dark:text-white">€${(item.price_cents || 1700) / 100}</p>
-          </div>
+        <div class="px-4 pb-4">
+          <a class="w-full bg-primary hover:bg-primary/90 text-white font-semibold h-12 rounded-full transition-all active:scale-[0.98] flex items-center justify-center gap-2" href="psicologo-perfil.html" data-action="select-psychologist" data-psychologist-id="${
+            item.id
+          }"><span>Ver perfil</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span></a>
         </div>
-        <a class="w-full bg-primary hover:bg-primary/90 text-white font-semibold h-12 rounded-full transition-all active:scale-[0.98] flex items-center justify-center gap-2" href="psicologo-perfil.html" data-action="select-psychologist" data-psychologist-id="${
-          item.id
-        }"><span>Ver perfil</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span></a>
       `;
       container.appendChild(card);
     });
