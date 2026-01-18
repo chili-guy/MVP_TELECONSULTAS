@@ -85,6 +85,9 @@
 <div class="absolute bottom-1 right-1 bg-green-500 text-white p-1 rounded-full border-2 border-white dark:border-background-dark flex items-center justify-center" title="Verificado">
 <span class="material-symbols-outlined text-[16px] leading-none">check</span>
 </div>
+<label for="psych-photo-input" class="absolute bottom-1 left-1 bg-primary text-white p-1.5 rounded-full border-2 border-white dark:border-background-dark flex items-center justify-center cursor-pointer" title="Alterar foto">
+<span class="material-symbols-outlined text-[16px] leading-none">edit</span>
+</label>
 </div>
 <!-- Name & Title -->
 <div class="text-center space-y-1">
@@ -93,7 +96,7 @@
 </div>
 </section>
 <section class="px-6 pb-6">
-  <input class="w-full text-sm" type="file" accept="image/png,image/jpeg" data-photo-input="psych" data-photo-target="[data-profile-image]"/>
+  <input id="psych-photo-input" type="file" accept="image/png,image/jpeg" data-photo-input="psych" data-photo-target="[data-profile-image]" style="display:none;"/>
   <p class="text-[11px] text-gray-500 mt-1 text-center">Recomendado: 800x800px, JPG/PNG, até 5MB.</p>
 </section>
 <!-- Bio Section -->
