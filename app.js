@@ -886,6 +886,60 @@
     });
   };
 
+  const updateBottomNavActive = () => {
+    const path = window.location.pathname.split("/").pop() || "dashboard.html";
+    const lower = path.toLowerCase();
+    let section = "inicio";
+    if (
+      lower.includes("agendamentos") ||
+      lower.includes("psicolog") ||
+      lower.includes("consulta-")
+    ) {
+      section = "agendar";
+    } else if (
+      lower.includes("blog") ||
+      lower.includes("noticia") ||
+      lower.includes("video") ||
+      lower.includes("videoteca") ||
+      lower.includes("event") ||
+      lower.includes("rede-apoio") ||
+      lower.includes("tests") ||
+      lower.includes("teste")
+    ) {
+      section = "conteudos";
+    } else if (
+      lower.includes("perfil") ||
+      lower.includes("configuracoes") ||
+      lower.includes("pagamentos") ||
+      lower.includes("assinatura")
+    ) {
+      section = "perfil";
+    }
+
+    const matchForSection = (href = "") => {
+      if (section === "inicio") return href.includes("dashboard.html");
+      if (section === "agendar") {
+        return href.includes("agendamentos.html") || href.includes("psicologos.html");
+      }
+      if (section === "conteudos") return href.includes("blog.html");
+      if (section === "perfil") return href.includes("perfil.html");
+      return false;
+    };
+
+    document.querySelectorAll("nav").forEach((nav) => {
+      const links = Array.from(nav.querySelectorAll("a[href]"));
+      if (links.length === 0) return;
+      links.forEach((link) => {
+        link.classList.remove("text-primary", "font-semibold");
+        link.classList.add("text-text-secondary", "dark:text-text-on-dark/70");
+      });
+      const active = links.find((link) => matchForSection(link.getAttribute("href") || ""));
+      if (active) {
+        active.classList.add("text-primary", "font-semibold");
+      }
+    });
+  };
+
   const renderProfile = async () => {
     const nameEl = document.querySelector("[data-user-name]");
     const emailEl = document.querySelector("[data-user-email]");
@@ -1156,6 +1210,7 @@
     updatePsychologistStatusUI();
     initCadastroBackGuard();
     initPhotoUploads();
+    updateBottomNavActive();
     renderProfile();
     renderDashboardGreeting();
   };
